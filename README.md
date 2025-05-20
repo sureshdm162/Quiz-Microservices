@@ -22,36 +22,26 @@ This project is composed of the following components:
 ### 1. `questiondb`
 Contains the `question` table with the following schema:
 
-Fields              Type             Key               Extra
-----------------------------------------------------------------------
-ID                  int              Primary           auto_increment
-category            varchar(255)
-difficultyLevel     varchar(20)
-option1             varchar(255)
-option2             varchar(255)
-option3             varchar(255)
-option4             varchar(255)
-question_title      varchar(255)
-right_answer        varchar(255)
-
+Fields:
+------------------------------------------------------------------------
+ID, category, difficultyLevel, option1, option2, option3, option4,  question_title, right_answer
 
 ### 2. `quizdb`
 Contains two tables:
 
 #### `quiz` Table
-Fields              Type             Key               Extra
+Fields:
 ------------------------------------------------------------------------
-ID                  int              Primary           auto_increment
-title               varchar(255)
-
+ID      
+title
 
 
 
 #### `quiz_question_ids` Table
-Fields                  Type             Key               Extra
+Fields:
 ------------------------------------------------------------------------
-quiz_id                 int              Primary           auto_increment
-question_ids            int              Multiple
+quiz_id
+question_ids
 
 
 
@@ -79,10 +69,6 @@ question_ids            int              Multiple
   - Manages questions
   - Performs CRUD operations on the question table
 - Not exposed directly to users; only accessed by `quiz-service`
-
-
-
-
 
 
 
