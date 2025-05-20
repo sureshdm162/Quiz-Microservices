@@ -32,18 +32,12 @@ Contains two tables:
 #### `quiz` Table
 Fields:
 ------------------------------------------------------------------------
-ID      
-title
-
-
+ID, title
 
 #### `quiz_question_ids` Table
 Fields:
 ------------------------------------------------------------------------
-quiz_id
-question_ids
-
-
+quiz_id, question_ids
 
 
 ##  Microservices Overview
