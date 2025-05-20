@@ -76,7 +76,7 @@ quiz_id, question_ids
 - **OpenFeign**
 - **MySQL**
 - **Maven**
-- **Java JDK-23**
+- **Java JDK-21**
 
 ---
 
