@@ -22,40 +22,38 @@ This project is composed of the following components:
 ### 1. `questiondb`
 Contains the `question` table with the following schema:
 
-+-----------------+--------------+------+-----+---------+----------------+
-| Field           | Type         | Null | Key | Default | Extra          |
-+-----------------+--------------+------+-----+---------+----------------+
-| ID              | int          | NO   | PRI | NULL    | auto_increment |
-| category        | varchar(255) | YES  |     | NULL    |                |
-| difficultyLevel | varchar(20)  | YES  |     | NULL    |                |
-| option1         | varchar(255) | YES  |     | NULL    |                |
-| option2         | varchar(255) | YES  |     | NULL    |                |
-| option3         | varchar(255) | YES  |     | NULL    |                |
-| option4         | varchar(255) | YES  |     | NULL    |                |
-| question_title  | varchar(255) | YES  |     | NULL    |                |
-| right_answer    | varchar(255) | YES  |     | NULL    |                
+Fields              Type             Key               Extra
+----------------------------------------------------------------------
+ID                  int              Primary           auto_increment
+category            varchar(255)
+difficultyLevel     varchar(20)
+option1             varchar(255)
+option2             varchar(255)
+option3             varchar(255)
+option4             varchar(255)
+question_title      varchar(255)
+right_answer        varchar(255)
 
 
 ### 2. `quizdb`
 Contains two tables:
 
 #### `quiz` Table
-+-------+--------------+------+-----+---------+----------------+
-| Field | Type         | Null | Key | Default | Extra          |
-+-------+--------------+------+-----+---------+----------------+
-| id    | int          | NO   | PRI | NULL    | auto_increment |
-| title | varchar(255) | YES  |     | NULL    |                |
-+-------+--------------+------+-----+---------+----------------+
+Fields              Type             Key               Extra
+------------------------------------------------------------------------
+ID                  int              Primary           auto_increment
+title               varchar(255)
+
 
 
 
 #### `quiz_question_ids` Table
-+--------------+------+------+-----+---------+-------+
-| Field        | Type | Null | Key | Default | Extra |
-+--------------+------+------+-----+---------+-------+
-| quiz_id      | int  | NO   | MUL | NULL    |       |
-| question_ids | int  | YES  |     | NULL    |       |
-+--------------+------+------+-----+---------+-------+
+Fields                  Type             Key               Extra
+------------------------------------------------------------------------
+quiz_id                 int              Primary           auto_increment
+question_ids            int              Multiple
+
+
 
 
 ##  Microservices Overview
@@ -101,6 +99,7 @@ Contains two tables:
 - **Java JDK-23**
 
 ---
+
 
 ##  Getting Started
 
